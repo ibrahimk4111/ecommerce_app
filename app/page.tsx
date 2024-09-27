@@ -1,5 +1,5 @@
-import Man from "@/components/bodyComponents/man/Man";
-import Categories from "@/components/categories/Categories";
+import Man from "@/components/bodyComponents/man/man";
+import Categories from "@/components/categories/categories";
 
 export default function Home() {
   return (

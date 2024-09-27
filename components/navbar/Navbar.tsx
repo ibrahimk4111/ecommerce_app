@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className=" md:sticky top-0 bg-slate-100 flex justify-between items-center gap-5 px-10 py-2 ">
-      <Link href={paths.home} className=" text-2xl font-bold font-sans hover:text-orange-400 text-orange-500">VAN PLAZA</Link>
+      <Link href={paths.home} className=" text-2xl font-bold font-sans hover:text-orange-400 text-orange-500">VAN</Link>
       <div className=" w-full max-w-[40vw]">
         <input
           name="name"

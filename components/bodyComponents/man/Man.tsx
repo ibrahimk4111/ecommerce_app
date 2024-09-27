@@ -1,5 +1,5 @@
 import React from "react";
-import ManCards from "./ManCards";
+import ManCards from "./manCards";
 
 const Man = () => {
 
