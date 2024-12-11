@@ -1,22 +1,61 @@
 import { paths } from "@/utils/paths";
 import Link from "next/link";
 import React from "react";
+import Topbar from "./topbar";
+import { LogInIcon, SearchIcon, ShoppingCart, UserCircle } from "lucide-react";
+import { iconOptions } from "@/api/navLinks";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { TbTrolley } from "react-icons/tb";
+import { BsPeople } from "react-icons/bs";
 
 const Navbar = () => {
   return (
-    <div className=" md:sticky top-0 bg-slate-100 flex justify-between items-center gap-5 px-10 py-2 ">
-      <Link href={paths.home} className=" text-2xl font-bold font-sans hover:text-orange-400 text-orange-500">VAN</Link>
-      <div className=" w-full max-w-[40vw]">
-        <input
-          name="name"
-          type="text"
-          placeholder="Search Products..."
-          className="w-full border bg-white dark:bg-[#0b3631] dark:placeholder:text-slate-400 px-5 py-2 rounded-md focus:ring-1 outline-none"
-        />
+    <div className=" sticky top-0 bg-white ">
+      <div className="w-full bg-[#F5F5F5] h-10 flex justify-center items-center">
+        <Topbar />
       </div>
-      <div className=" flex items-center">
-        <Link href={paths.auth.signin} className=" hover:bg-white hover:underline px-5 py-2 rounded-md">Login</Link>
-        <Link href={paths.auth.signup} className=" hover:bg-white hover:underline px-5 py-2 rounded-md">Sign up</Link>
+
+      <div className=" container w-full mx-auto flex justify-between items-center py-5 ">
+        <Link
+          href={paths.home}
+          className=" text-2xl font-bold font-sans text-[#008ECC]"
+        >
+          MegaMart
+        </Link>
+
+        {/* search section */}
+        <div className=" flex items-center gap-1 w-full max-w-[40vw] ">
+          <Input
+            name="name"
+            type="text"
+            placeholder="Search Products..."
+            className=" h-9 w-full rounded-md outline-none text-lg "
+          />
+          <Button variant={"outline"} size={"icon"}>
+            <SearchIcon stroke={iconOptions.stroke} size={iconOptions.size} />
+          </Button>
+        </div>
+
+
+        {/* log in and cart options  */}
+        <div className=" flex items-center justify-center gap-5">
+          <Link
+            href={paths.auth.signin}
+            className="px-1 hover:bg-slate-100 hover:underline gap-1 rounded-md flex justify-center items-center"
+          >
+            <UserCircle stroke={iconOptions.stroke} size={iconOptions.size}/>
+            <span className=" p-1 ">Login</span>
+          </Link>
+          
+          <Link
+            href={paths.auth.signup}
+            className="px-1 hover:bg-slate-100 hover:underline gap-1 rounded-md flex justify-center items-center"
+          >
+            <ShoppingCart stroke={iconOptions.stroke} size={iconOptions.size}/>
+            <span className=" p-1 ">Cart</span>
+          </Link>
+        </div>
       </div>
     </div>
   );
