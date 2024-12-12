@@ -2,21 +2,20 @@ import { paths } from "@/utils/paths";
 import Link from "next/link";
 import React from "react";
 import Topbar from "./topbar";
-import { LogInIcon, SearchIcon, ShoppingCart, UserCircle } from "lucide-react";
+import { SearchIcon, ShoppingCart, UserCircle } from "lucide-react";
 import { iconOptions } from "@/api/navLinks";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { TbTrolley } from "react-icons/tb";
-import { BsPeople } from "react-icons/bs";
+import Categorybar from "./categorybar";
 
 const Navbar = () => {
   return (
     <div className=" sticky top-0 bg-white ">
-      <div className="w-full bg-[#F5F5F5] h-10 flex justify-center items-center">
+      <div className="w-full bg-[#F5F5F5] py-1 flex justify-center items-center">
         <Topbar />
       </div>
 
-      <div className=" container w-full mx-auto flex justify-between items-center py-5 ">
+      <div className=" container w-full mx-auto flex justify-between items-center py-2 ">
         <Link
           href={paths.home}
           className=" text-2xl font-bold font-sans text-[#008ECC]"
@@ -37,25 +36,28 @@ const Navbar = () => {
           </Button>
         </div>
 
-
         {/* log in and cart options  */}
         <div className=" flex items-center justify-center gap-5">
           <Link
             href={paths.auth.signin}
             className="px-1 hover:bg-slate-100 hover:underline gap-1 rounded-md flex justify-center items-center"
           >
-            <UserCircle stroke={iconOptions.stroke} size={iconOptions.size}/>
+            <UserCircle stroke={iconOptions.stroke} size={iconOptions.size} />
             <span className=" p-1 ">Login</span>
           </Link>
-          
+
           <Link
             href={paths.auth.signup}
             className="px-1 hover:bg-slate-100 hover:underline gap-1 rounded-md flex justify-center items-center"
           >
-            <ShoppingCart stroke={iconOptions.stroke} size={iconOptions.size}/>
+            <ShoppingCart stroke={iconOptions.stroke} size={iconOptions.size} />
             <span className=" p-1 ">Cart</span>
           </Link>
         </div>
+      </div>
+
+      <div className="w-full border border-[#b8b8b877]">
+        <Categorybar />
       </div>
     </div>
   );

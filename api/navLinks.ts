@@ -1,6 +1,6 @@
 import { IoLocationOutline } from "react-icons/io5";
 import { Settings, TruckIcon } from "lucide-react";
-export const iconOptions = {stroke: "#008ECC", size: 16}
+export const iconOptions = { stroke: "#008ECC", size: 16 };
 
 export const topbarNavLinks = [
   {
@@ -11,11 +11,60 @@ export const topbarNavLinks = [
   {
     id: 2,
     icon: TruckIcon,
-    text: "Track your order"
+    text: "Track your order",
   },
   {
     id: 3,
     icon: Settings,
-    text: "All Offers"
-  }
+    text: "All Offers",
+  },
+];
+
+export const categoryLinks = [
+  {
+    id: 1,
+    text: "Groceries",
+  },
+  {
+    id: 2,
+    text: "Fruits",
+  },
+  {
+    id: 3,
+    text: "Home & Kitchen",
+  },
+  {
+    id: 4,
+    text: "Fashion",
+    subMenu: [
+      {
+        subText: "Man",
+      },
+      {
+        subText: "Woman",
+      },
+      {
+        subText: "Baby",
+      }
+    ],
+  },
+  {
+    id: 5,
+    text: "Eelectronics",
+    subMenu: [
+      {
+        subText: "Mobile",
+      },
+      {
+        subText: "Lapotp",
+      },
+      {
+        subText: "Desktop",
+      }
+    ],
+  },
+  {
+    id: 6,
+    text: "Sports",
+  },
 ];
