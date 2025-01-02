@@ -72,29 +72,29 @@ interface popularcategories {
   bgcolor: "yellow" | "red" |  "green" |  "purple";
 }[]
 
-export const popularcategories = [
+export const popularcategories: popularcategories[] = [
   {
     image: "1",
     items: 250,
     name: "Cake and Milk",
-    bgcolor: "bg-yellow-500"
+    bgcolor: "yellow"
   },
   {
     image: "2",
     items: 250,
     name: "Cake and Milk",
-    bgcolor: "bg-red-500"
+    bgcolor: "red"
   },
   {
     image: "3",
     items: 250,
     name: "Cake and Milk",
-    bgcolor: "bg-green-500"
+    bgcolor: "green"
   },
   {
     image: "4",
     items: 250,
     name: "Cake and Milk",
-    bgcolor: "bg-black"
+    bgcolor: "purple"
   },
 ]
