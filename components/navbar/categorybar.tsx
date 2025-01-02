@@ -27,7 +27,7 @@ const Categorybar = () => {
         <Button
           variant="outline"
           size={"default"}
-          className=" bg-[#008ECC] text-white font-bold"
+          className=" bg-commonColor text-white font-bold"
         >
           <BsGrid stroke={iconOptions.stroke} size={iconOptions.size} />
           <span>Browse All Categories</span>

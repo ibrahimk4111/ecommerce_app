@@ -9,16 +9,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      extend: {
-        container: {
-          center: true,
-          padding: "1rem",
-          screens: {
-            sm: "100%",
-            md: "80%",
-            lg: "1100px",
-            xxl: "1200px",
-          },
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          sm: "100%",
+          md: "80%",
+          lg: "1100px",
+          xxl: "1200px",
         },
       },
       backgroundImage: {
@@ -32,6 +30,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        commonColor:"#008ECC",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

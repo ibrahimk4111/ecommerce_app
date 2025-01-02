@@ -42,7 +42,7 @@ const SignupForm = () => {
       </div>
       <button
         type="submit"
-        className="font-bold text-center bg-orange-400 hover:bg-orange-500 p-2 w-full text-white transition-all duration-300 ease-in-out"
+        className=" rounded-md font-bold text-center bg-commonColor hover:bg-commonColor/80 p-2 w-full text-white transition-all duration-300 ease-in-out"
       >
         SIGN UP
       </button>

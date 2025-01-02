@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className=" container w-full mx-auto flex justify-between items-center py-2 ">
         <Link
           href={paths.home}
-          className=" text-2xl font-bold font-sans text-[#008ECC]"
+          className=" text-2xl font-bold font-sans text-commonColor"
         >
           MegaMart
         </Link>

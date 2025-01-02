@@ -6,8 +6,8 @@ import SignupForm from "./SignupForm";
 
 const Signup = () => {
   return (
-    <div className=" bg-orange-50 min-h-screen flex justify-center items-center p-2">
-      <div className=" bg-white p-5 flex flex-col gap-10 xl:w-[25vw] lg:w-[30vw] md:w-[40vw] sm:w-[50vw] w-full">
+    <div className=" w-full flex justify-center items-center rounded-md ">
+      <div className="  p-5 flex flex-col gap-10 xl:w-[25vw] lg:w-[30vw] md:w-[40vw] sm:w-[50vw] w-full">
         <h1 className=" text-center text-2xl font-bold underline underline-offset-8">
           Register a new account
         </h1>
