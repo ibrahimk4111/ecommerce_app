@@ -1,14 +1,15 @@
 import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import Productcard from "./productcard";
+import Bannercard from "./bannercard";
+import Categorycard from "./categorycard";
 
 const Popularcategory = () => {
   return (
-    <div className=" container mx-auto py-5 ">
-      <div className="w-full flex justify-between items-center py-5 ">
-        <div className=" flex gap-5">
+    <div className=" container mx-auto py-3 ">
+      <div className=" w-full flex justify-between items-center py-5  ">
+        <div className=" flex gap-5 items-center justify-center">
           <h1 className=" text-2xl font-bold ">Featured Categories</h1>
-          <ul className=" flex gap-5 justify-center items-center ">
+          <ul className=" flex gap-5 justify-center items-center text-sm ">
             <li>
               <a href="#">Cake & Milk</a>
             </li>
@@ -24,13 +25,15 @@ const Popularcategory = () => {
           </ul>
         </div>
 
-        <div className=" flex justify-between items-center gap-3">
-          <IoIosArrowBack className=" p-1 w-6 h-6 bg-commonColor/20 rounded-full text-center hover:bg-commonColor/30 text-slate-500 cursor-pointer" />
-          <IoIosArrowForward className=" p-1 w-6 h-6 bg-commonColor/20 rounded-full text-center hover:bg-commonColor/30 text-slate-500 cursor-pointer" />
-        </div>
+        <p className=" text-sm hover:underline cursor-pointer">
+          See More
+        </p>
       </div>
       <div>
-        <Productcard />
+        <Categorycard />
+      </div>
+      <div>
+        <Bannercard />
       </div>
     </div>
   );

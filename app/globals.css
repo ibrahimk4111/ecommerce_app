@@ -8,6 +8,19 @@
   }
 }
 
+.scrollbarofcategorycard::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+/* .scrollbarofcategorycard::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px rgba(255, 0, 0, 0.3);
+} */
+
+/* .scrollbarofcategorycard::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 0, 0);
+  outline: 1px solid slategrey;
+} */
+
 @layer base {
   :root {
     --background: 0 0% 100%;

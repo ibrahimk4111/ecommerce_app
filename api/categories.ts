@@ -1,7 +1,16 @@
 import activity_1 from "@/public/categories/Activities-5.png";
 import { paths } from "@/utils/paths";
+import { StaticImageData } from "next/image";
+import banner1 from "@/public/banner-1.jpg";
 
-export const categories = [
+
+interface Icategories {
+  img: StaticImageData;
+  name: string;
+  path: string;
+}[]
+
+export const categories: Icategories[] = [
   {
     img: activity_1,
     name: "Man",
@@ -74,27 +83,96 @@ interface popularcategories {
 
 export const popularcategories: popularcategories[] = [
   {
-    image: "1",
-    items: 250,
+    image: "https://drive.google.com/thumbnail?id=1KaiJj1ff4OWu7NaJdS7av_Vrmk9x6nE9",
+    items: 610,
     name: "Cake and Milk",
     bgcolor: "yellow"
   },
   {
-    image: "2",
-    items: 250,
+    image: "https://drive.google.com/thumbnail?id=1PDNOjkXliPBjtv40VHtK53feSsQ-d1Ut",
+    items: 81,
     name: "Cake and Milk",
     bgcolor: "red"
   },
   {
-    image: "3",
-    items: 250,
+    image: "https://drive.google.com/thumbnail?id=1510z49u8Zy0c-2-QWyxX0gASTzDZ0QIu",
+    items: 50,
     name: "Cake and Milk",
     bgcolor: "green"
   },
   {
-    image: "4",
-    items: 250,
+    image: "https://drive.google.com/thumbnail?id=1Umj1elHliWyNnlFyGlmEBcAR3EcI18Cl",
+    items: 400,
     name: "Cake and Milk",
     bgcolor: "purple"
   },
+  {
+    image: "https://drive.google.com/thumbnail?id=1KaiJj1ff4OWu7NaJdS7av_Vrmk9x6nE9",
+    items: 610,
+    name: "Cake and Milk",
+    bgcolor: "yellow"
+  },
+  {
+    image: "https://drive.google.com/thumbnail?id=1O3wU344qztNlOogkIyNTM7zSQxVftSMV",
+    items: 81,
+    name: "Cake and Milk",
+    bgcolor: "red"
+  },
+  {
+    image: "https://drive.google.com/thumbnail?id=1OSlOU4fLIu8gn6WBq7FKwhoPoRO2d2jC",
+    items: 50,
+    name: "Cake and Milk",
+    bgcolor: "green"
+  },
+  {
+    image: "https://drive.google.com/thumbnail?id=1KaiJj1ff4OWu7NaJdS7av_Vrmk9x6nE9",
+    items: 400,
+    name: "Cake and Milk",
+    bgcolor: "purple"
+  },
+  {
+    image: "https://drive.google.com/thumbnail?id=1KaiJj1ff4OWu7NaJdS7av_Vrmk9x6nE9",
+    items: 610,
+    name: "Cake and Milk",
+    bgcolor: "yellow"
+  },
+  {
+    image: "https://drive.google.com/thumbnail?id=1PDNOjkXliPBjtv40VHtK53feSsQ-d1Ut",
+    items: 81,
+    name: "Cake and Milk",
+    bgcolor: "red"
+  },
+  {
+    image: "https://drive.google.com/thumbnail?id=1510z49u8Zy0c-2-QWyxX0gASTzDZ0QIu",
+    items: 50,
+    name: "Cake and Milk",
+    bgcolor: "green"
+  },
+  {
+    image: "https://drive.google.com/thumbnail?id=1Umj1elHliWyNnlFyGlmEBcAR3EcI18Cl",
+    items: 400,
+    name: "Cake and Milk",
+    bgcolor: "purple"
+  },
+]
+
+
+interface Ibannerdatas {
+  image: string;
+  text: string;
+}[]
+
+export const bannerdatas: Ibannerdatas[] = [
+  {
+    image: "https://drive.google.com/thumbnail?id=1bmkuyal4yu9De8r3NJw2UQEvDo0moz5J",
+    text: "Everyday fresh & clean with our product."
+  }, 
+  {
+    image: "https://drive.google.com/thumbnail?id=1alYSP2C7GIalTG4mgTXSfiUs5reGFieI",
+    text: "Everyday fresh & clean with our product."
+  }, 
+  {
+    image: "https://drive.google.com/thumbnail?id=1VEtXNmwegqemo3bZHxJnwE_PIwbW3KM8",
+    text: "Everyday fresh & clean with our product."
+  }, 
 ]
