@@ -36,7 +36,7 @@ const Categorybar = () => {
       </div>
 
       {categoryLinks.map((item, index) => (
-        <DropdownMenu modal={false}>
+        <DropdownMenu key={index} modal={false}>
           <DropdownMenuTrigger asChild>
             <Link
               key={index}
@@ -55,7 +55,7 @@ const Categorybar = () => {
           {item.subMenu && (
             <DropdownMenuContent className="w-56">
               {item.subMenu?.map((subItem, index) => (
-                <DropdownMenuItem>{subItem.subText}</DropdownMenuItem>
+                <DropdownMenuItem key={index}>{subItem.subText}</DropdownMenuItem>
               ))}
             </DropdownMenuContent>
           )}

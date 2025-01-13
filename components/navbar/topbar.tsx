@@ -11,7 +11,7 @@ const Topbar: React.FC = () => {
         <div>Welcome to worldwide Megamart!</div>
         <div className=" flex justify-between items-center gap-5 ">
         {topbarNavLinks.map((item, index)=>(
-            <div className=" flex justify-center items-center gap-1 ">
+            <div key={index} className=" flex justify-center items-center gap-1 ">
               <item.icon stroke={iconOptions.stroke} size={iconOptions.size}/>
               <p className=" text-sm text-slate-500 hover:text-black cursor-pointer ">{item.text}</p>
             </div>

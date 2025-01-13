@@ -9,7 +9,7 @@ const Productcard = () => {
   return (
     <div className=" grid grid-cols-5 gap-3 ">
       {productdata.map((item, index) => (
-        <div className="text-sm border-2 rounded-2xl p-2 relative overflow-hidden">
+        <div key={index} className="text-sm border-2 rounded-2xl p-2 relative overflow-hidden">
           <span
             className={` absolute top-0 left-0 rounded-br-xl rounded-tl-xl ${
               item.label === "Hot"

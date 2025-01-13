@@ -17,7 +17,7 @@ const Bestsellscard = () => {
     <Carousel>
       <CarouselContent>
         {productdata.map((item, index) => (
-          <CarouselItem className=" basis-56">
+          <CarouselItem key={index} className=" basis-56">
             <div className="text-sm border-2 rounded-2xl p-2 relative overflow-hidden">
               <span
                 className={` absolute top-0 left-0 rounded-br-xl rounded-tl-xl ${

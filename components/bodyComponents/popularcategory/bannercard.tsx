@@ -8,7 +8,7 @@ const Bannercard = () => {
   return (
     <div className=" grid grid-cols-3 py-5 gap-5">
       {bannerdatas.map((item, index) => (
-        <div className=" relative ">
+        <div key={index} className=" relative ">
           <div className=" min-h-60 w-full relative ">
             <Image
               src={item.image}
