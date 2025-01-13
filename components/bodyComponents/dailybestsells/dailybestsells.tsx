@@ -26,7 +26,7 @@ const Dailybestsells = () => {
           <Image
             src={bestsellbanner}
             alt="best sell banners"
-            objectFit="contain"
+            fill={true}
           />
           <div className=" absolute top-0 flex flex-col justify-center items-start h-full px-10 gap-5 ">
             <p className=" font-bold text-3xl">Bring nature into your home.</p>

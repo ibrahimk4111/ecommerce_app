@@ -13,8 +13,7 @@ const Bannercard = () => {
             <Image
               src={item.image}
               alt="image file of 14"
-              objectFit="contain"
-              layout="fill"
+              fill={true}
             />
           </div>
           <div className=" absolute top-0 h-full max-w-60 flex justify-center items-center ">

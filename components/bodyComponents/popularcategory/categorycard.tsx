@@ -32,7 +32,7 @@ const Categorycard = () => {
                   <Image
                     src={item.image}
                     alt="image file of 14"
-                    objectFit="contain" layout="fill"
+                    fill={true}
                   />
                 </div>
                 <div className="flex flex-col justify-center items-center">
