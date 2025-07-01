@@ -38,6 +38,7 @@ const Bestsellscard = () => {
                   src={item.image}
                   alt="image file of 14"
                   fill={true}
+                  
                 />
               </div>
 

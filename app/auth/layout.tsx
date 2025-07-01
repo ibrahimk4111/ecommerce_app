@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { IoIosArrowBack } from "react-icons/io";
 import { paths } from "@/utils/paths";
+import Link from "next/link";
 
 export default function DashboardLayout({
   children,
@@ -8,11 +9,11 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className=" p-2 ">
+    <div className=" p-2 ">
       <Button variant={"outline"}  >
-        <IoIosArrowBack /> <a href={paths.home}> Home </a>
+        <IoIosArrowBack /> <Link href={paths.home}> Home </Link>
       </Button>
       {children}
-    </section>
+    </div>
   );
 }

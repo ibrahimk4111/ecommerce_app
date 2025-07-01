@@ -55,12 +55,12 @@ const Footer = () => {
       </div>
 
       {/* copyright  */}
-      <p className=" text-center mt-10 ">
-        Copyright © 2024 |{" "}
+      <div className=" text-center mt-10 ">
+        <span>Copyright © 2024 |</span>
         <a href="#" className=" ">
           Mega Mart
         </a>
-      </p>
+      </div>
     </div>
   );
 };
