@@ -5,20 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Button } from "../ui/button";
 import { BsGrid } from "react-icons/bs";
 import { HeadphonesIcon } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+// import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import Link from "next/link";
 
 const Categorybar = () => {
@@ -36,15 +23,16 @@ const Categorybar = () => {
         </Button>
       </div>
 
-      {categoryLinks.map((item, index) => (
-        <Link
-          key={index}
-          href="#"
-          className=" gap-1 flex justify-center items-center"
-        >
-          <span className=" p-1 ">{item.text}</span>
-        </Link>
-      ))}
+      <div className=" flex items-center justify-center gap-2 ">
+        {categoryLinks.map((item, index) => (
+          <Link
+            key={index}
+            href="#"
+            className="px-1 hover:text-commonColor">
+            <span className=" p-1 ">{item.text}</span>
+          </Link>
+        ))}
+      </div>
 
       {/* {categoryLinks.map((item, index) => (
         <DropdownMenu key={index} modal={false}>
@@ -74,10 +62,10 @@ const Categorybar = () => {
       ))} */}
 
       <div className=" flex items-center justify-center gap-2 ">
-        <HeadphonesIcon stroke={iconOptions.stroke} size={30} />
-        <div>
+        <HeadphonesIcon stroke={iconOptions.stroke} />
+        <div className=" text-sm "> 
           <p className=" text-[#008ECC] ">1900-888</p>
-          <p className=" text-sm w-40 ">24/7 Support Center</p>
+          <p >24/7 Support Center</p>
         </div>
       </div>
     </div>

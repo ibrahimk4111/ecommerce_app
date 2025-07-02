@@ -9,20 +9,6 @@ const Popularcategory = () => {
       <div className=" w-full flex justify-between items-center py-5  ">
         <div className=" flex gap-5 items-center justify-center">
           <h1 className=" text-2xl font-bold ">Featured Categories</h1>
-          <ul className=" flex gap-5 justify-center items-center text-sm ">
-            <li>
-              <a href="#">Cake & Milk</a>
-            </li>
-            <li>
-              <a href="#">Coffee & Tea</a>
-            </li>
-            <li>
-              <a href="#">Pet Food</a>
-            </li>
-            <li>
-              <a href="#">Vagetables</a>
-            </li>
-          </ul>
         </div>
 
         <p className=" text-sm hover:underline cursor-pointer">

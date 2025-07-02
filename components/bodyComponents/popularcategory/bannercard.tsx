@@ -6,7 +6,7 @@ import { bannerdatas } from "@/api/categories";
 
 const Bannercard = () => {
   return (
-    <div className=" grid grid-cols-3 py-5 gap-5">
+    <div className=" grid lg:grid-cols-3 md:grid-cols-2 py-5 gap-5">
       {bannerdatas.map((item, index) => (
         <div key={index} className=" relative ">
           <div className=" min-h-60 w-full relative ">

@@ -17,8 +17,8 @@ const page = () => {
       <Popularproduct />
       <Dailybestsells />
       <Newsletter />
-      <Bestsellscard />
-      <Man />
+      {/* <Bestsellscard /> */}
+      {/* <Man /> */}
       <Footer />
     </>
   );

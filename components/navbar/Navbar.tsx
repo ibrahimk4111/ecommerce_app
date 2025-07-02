@@ -3,22 +3,13 @@ import { paths } from "@/utils/paths";
 import Link from "next/link";
 import React from "react";
 import Topbar from "./topbar";
-import { CrossIcon, SearchIcon, ShoppingCart, UserCircle } from "lucide-react";
+import { SearchIcon, ShoppingCart, UserCircle } from "lucide-react";
 import { iconOptions } from "@/api/navLinks";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import Categorybar from "./categorybar";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "../ui/drawer";
+import { DrawerComp } from "./drawer";
+
 
 const Navbar = () => {
   return (
@@ -29,24 +20,7 @@ const Navbar = () => {
 
       <div className=" ">
         <div className=" container w-full mx-auto flex justify-between items-center py-2 ">
-          <Drawer direction="left">
-            <DrawerTrigger>
-              <HamburgerMenuIcon
-                className=" text-commonColor p-2 hover:border-2 border-solid border-[#b8b8b877] rounded-md cursor-pointer h-10 w-10"
-                stroke={iconOptions.stroke}
-              />
-            </DrawerTrigger>
-            <DrawerContent>
-              <DrawerHeader>
-                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-              </DrawerHeader>
-              <DrawerFooter>
-                <DrawerClose>
-                  <CrossIcon className=" absolute right-10 top-10 " />
-                </DrawerClose>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
+          <DrawerComp />
 
           {/* logo section */}
           <Link
