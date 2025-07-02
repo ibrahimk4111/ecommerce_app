@@ -1,3 +1,4 @@
+"use client";
 import { categoryLinks, iconOptions } from "@/api/navLinks";
 import React from "react";
 import { IoIosArrowDown } from "react-icons/io";
@@ -22,7 +23,7 @@ import Link from "next/link";
 
 const Categorybar = () => {
   return (
-    <div className=" container mx-auto flex items-center justify-between w-full py-3 ">
+    <div className=" container mx-auto hidden md:flex items-center justify-between w-full py-3 ">
       <div>
         <Button
           variant="outline"
@@ -36,6 +37,16 @@ const Categorybar = () => {
       </div>
 
       {categoryLinks.map((item, index) => (
+        <Link
+          key={index}
+          href="#"
+          className=" gap-1 flex justify-center items-center"
+        >
+          <span className=" p-1 ">{item.text}</span>
+        </Link>
+      ))}
+
+      {/* {categoryLinks.map((item, index) => (
         <DropdownMenu key={index} modal={false}>
           <DropdownMenuTrigger asChild>
             <Link
@@ -60,7 +71,7 @@ const Categorybar = () => {
             </DropdownMenuContent>
           )}
         </DropdownMenu>
-      ))}
+      ))} */}
 
       <div className=" flex items-center justify-center gap-2 ">
         <HeadphonesIcon stroke={iconOptions.stroke} size={30} />

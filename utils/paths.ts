@@ -14,6 +14,7 @@ export const paths = {
   //   shoes: "/categories/Shoes",
   //   home: "/categories/Home ",
   // },
+  cart: "/cart",
   categories: {
     man: "#",
     woman: "#",

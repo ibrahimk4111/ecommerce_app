@@ -1,22 +1,54 @@
+"use client";
 import { paths } from "@/utils/paths";
 import Link from "next/link";
 import React from "react";
 import Topbar from "./topbar";
-import { SearchIcon, ShoppingCart, UserCircle } from "lucide-react";
+import { CrossIcon, SearchIcon, ShoppingCart, UserCircle } from "lucide-react";
 import { iconOptions } from "@/api/navLinks";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import Categorybar from "./categorybar";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "../ui/drawer";
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 bg-white z-[1000]  ">
-      <div className="w-full bg-[#F5F5F5] py-1 flex justify-center items-center  ">
+    <div className="sticky top-0 bg-white z-30  ">
+      <div className="w-full bg-[#F5F5F5] py-1 hidden md:flex justify-center items-center ">
         <Topbar />
       </div>
 
       <div className=" ">
         <div className=" container w-full mx-auto flex justify-between items-center py-2 ">
+          <Drawer direction="left">
+            <DrawerTrigger>
+              <HamburgerMenuIcon
+                className=" text-commonColor p-2 hover:border-2 border-solid border-[#b8b8b877] rounded-md cursor-pointer h-10 w-10"
+                stroke={iconOptions.stroke}
+              />
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+              </DrawerHeader>
+              <DrawerFooter>
+                <DrawerClose>
+                  <CrossIcon className=" absolute right-10 top-10 " />
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+
+          {/* logo section */}
           <Link
             href={paths.home}
             className=" text-2xl font-bold font-sans text-commonColor"
@@ -25,20 +57,26 @@ const Navbar = () => {
           </Link>
 
           {/* search section */}
-          <div className=" flex items-center gap-1 w-full max-w-[40vw] ">
+          <div className=" flex items-center gap-1 w-auto md:w-full md:max-w-[40vw] ">
             <Input
               name="name"
               type="text"
               placeholder="Search Products..."
-              className=" h-9 w-full rounded-md outline-none text-lg "
+              className=" h-9 w-full rounded-md outline-none text-lg hidden md:flex "
             />
-            <Button variant={"outline"} size={"icon"}>
-              <SearchIcon stroke={iconOptions.stroke} size={iconOptions.size} />
-            </Button>
+            <div>
+              <Button variant={"outline"} size={"icon"}>
+                <SearchIcon
+                  className=" text-commonColor"
+                  stroke={iconOptions.stroke}
+                  size={iconOptions.size}
+                />
+              </Button>
+            </div>
           </div>
 
           {/* log in and cart options  */}
-          <div className=" flex items-center justify-center gap-5">
+          <div className=" hidden md:flex items-center justify-center gap-5">
             <Link
               href={paths.auth.signin}
               className="px-1 hover:bg-slate-100 hover:underline gap-1 rounded-md flex justify-center items-center"
@@ -46,9 +84,16 @@ const Navbar = () => {
               <UserCircle stroke={iconOptions.stroke} size={iconOptions.size} />
               <span className=" p-1 ">Login</span>
             </Link>
-
             <Link
               href={paths.auth.signup}
+              className="px-1 hover:bg-slate-100 hover:underline gap-1 rounded-md flex justify-center items-center"
+            >
+              <UserCircle stroke={iconOptions.stroke} size={iconOptions.size} />
+              <span className=" p-1 ">Sign Up</span>
+            </Link>
+
+            <Link
+              href={paths.cart}
               className="px-1 hover:bg-slate-100 hover:underline gap-1 rounded-md flex justify-center items-center"
             >
               <ShoppingCart

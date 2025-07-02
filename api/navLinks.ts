@@ -20,51 +20,71 @@ export const topbarNavLinks = [
   },
 ];
 
+// export const categoryLinks = [
+//   {
+//     id: 1,
+//     text: "Groceries",
+//   },
+//   {
+//     id: 2,
+//     text: "Fruits",
+//   },
+//   {
+//     id: 3,
+//     text: "Home & Kitchen",
+//   },
+//   {
+//     id: 4,
+//     text: "Fashion",
+//     subMenu: [
+//       {
+//         subText: "Man",
+//       },
+//       {
+//         subText: "Woman",
+//       },
+//       {
+//         subText: "Baby",
+//       }
+//     ],
+//   },
+//   {
+//     id: 5,
+//     text: "Eelectronics",
+//     subMenu: [
+//       {
+//         subText: "Mobile",
+//       },
+//       {
+//         subText: "Lapotp",
+//       },
+//       {
+//         subText: "Desktop",
+//       }
+//     ],
+//   },
+//   {
+//     id: 6,
+//     text: "Sports",
+//   },
+// ];
+
+
 export const categoryLinks = [
   {
     id: 1,
-    text: "Groceries",
+    text: "All Products",
   },
   {
     id: 2,
-    text: "Fruits",
+    text: "Contacts",
   },
   {
     id: 3,
-    text: "Home & Kitchen",
+    text: "FAQs",
   },
   {
     id: 4,
-    text: "Fashion",
-    subMenu: [
-      {
-        subText: "Man",
-      },
-      {
-        subText: "Woman",
-      },
-      {
-        subText: "Baby",
-      }
-    ],
-  },
-  {
-    id: 5,
-    text: "Eelectronics",
-    subMenu: [
-      {
-        subText: "Mobile",
-      },
-      {
-        subText: "Lapotp",
-      },
-      {
-        subText: "Desktop",
-      }
-    ],
-  },
-  {
-    id: 6,
-    text: "Sports",
+    text: "About Us",
   },
 ];

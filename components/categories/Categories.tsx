@@ -1,7 +1,8 @@
+
 import { categories } from "@/api/categories";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 
 const Categories = () => {
 

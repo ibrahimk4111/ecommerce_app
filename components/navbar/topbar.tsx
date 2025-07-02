@@ -6,7 +6,7 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const Topbar: React.FC = () => {
   return (
-    <div className=" container mx-auto ">
+    <div className=" container mx-auto  ">
       <div className=" flex justify-between ">
         <div>Welcome to worldwide Megamart!</div>
         <div className=" flex justify-between items-center gap-5 ">
